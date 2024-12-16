@@ -10,5 +10,5 @@ robot.motors(1, 1, 2)
 elif if go== "up"
 robot.motors(1, 1, 2)
 elif if go== spin "down" 
-robot.motors(1, 1, 2)
+robot.motors(1, 1, 2) 
 robot.exit()
