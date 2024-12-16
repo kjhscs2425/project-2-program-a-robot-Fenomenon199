@@ -6,8 +6,8 @@ To install all dependencies, type the following into the Terminal (if you're on 
     conda install numpy
 
 Project Requirements:
-* [ ] robot moves
-* [ ] robot does not crash into the walls of the box
+* [ x] robot moves
+* [ x] robot does not crash into the walls of the box
 * [ ] at least 5 calls to input
 * [ ] at least 5 functions
 * [ ] at least 2 functions have at least one parameter
