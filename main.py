@@ -2,7 +2,6 @@
 from simulator import robot
 import time
 
-left, right = robot.sonars()
 spin = input("Do you want to spin right or left? ")
 seconds= float( input("How many seconds would you run for? "))
 if spin == "right":
@@ -14,8 +13,15 @@ elif spin == "left":
 go = input("Do you want to go forward or backward? ")
 seconds= float( input("How many seconds would you run for? "))
 if go== "forward":
-   robot.motors(1, 1, seconds)
+    while True:
+        left, right = robot.sonars()
+        robot.motors(1, 1, 0.01)
+        print(left, right)
+        if left < 75 or right < 75:
+            break
 elif go==  "backward": 
-    robot.motors(-1, -1, seconds)
-
-robot.exit()
+    while True:
+        left, right = robot.sonars()    
+        robot.motors(-1, -1, 0.1)
+        if left > 375 or right > 375:
+            break
